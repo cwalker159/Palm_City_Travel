@@ -22,35 +22,172 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-   
-    <nav>
-      <!--navigation goes here-->
-    </nav>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://res.cloudinary.com/dlh51prh7/image/upload/v1663092795/Palm%20City%20Travel%20Project/Blue_Orange_Flight_Destination_Travel_Agency_Logo_1_ajzjk6.png"
+            alt="Bootstrap"
+            width="100"
+            height="94"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+          </ul>
 
+          <button>
+            <a class="nav-link" href="#">Get Started</a>
+          </button>
+
+          <!-- <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form> -->
+        </div>
+      </div>
+    </nav>
 
     <main>
       <section id="hero">
         <!--Hero goes in here-->
+
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide"
+          data-bs-ride="false"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./images/first_slide_carousel.jpeg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Happiness comes in waves</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images/second_slide_carousel.jpeg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Participate in exciting events</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Wine and dine</h5>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </section>
-      
+
       <section id="about-us">
         <!--about us goes here-->
 
+        <div class="container text-center">
+          <div class="row">
+            <div id="about_us_main" class="col">
+              <h2 class="about_us_title">About Us</h2>
+              <p class="about_us_description">
+                Palm City Travel Guide is the largest independently owned travel
+                guide platform with headquartered in Virginia, and consistently
+                ranked among the top 50 website in the United States. Palm City
+                Travel Guide help travelers discover local restaurants as well
+                as local breweries and events. Our goal is to make planning
+                easy.
+              </p>
+            </div>
+            <div class="col order-1">
+              <img
+                class="about_us_image"
+                src="./images/photo-1488646953014-85cb44e25828.avif"
+              />
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
-
-
     <footer>
-
-       <!--footer us goes here-->
+      <!--footer us goes here-->
     </footer>
 
-
-
-
-
-      <!-- JavaScript Bundle with Popper -->
+    <!-- JavaScript Bundle with Popper -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
