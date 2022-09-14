@@ -52,7 +52,6 @@ button{
 }
 
 
-}
 
 
 #experiences{
@@ -105,11 +104,10 @@ padding: 0 30px 0 0;
 }
 
 
-}
 
 /* Testimonials */
 #testimonials{
-  background-color: rgb(177, 185, 198);
+  background-color: #a2513f;
   
 }
 .testimonialTittle{
@@ -193,8 +191,6 @@ padding: 0 30px 0 0;
 footer{
 
   background-color: #1A385A;
-
-  background-color: #929fba;
 
 }
 
