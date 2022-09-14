@@ -2,18 +2,99 @@
   box-sizing: border-box;
 }
 
+/* General styles */
+
 body {
   background-color: white;
+  
 }
+
+button{
+  border-radius: .5rem;
+  border: 1px solid black;
+}
+
+/* nav styles */
+
+
+
+.logo{
+  display: flex;
+  align-items: center;
+  font-family: 'Paytone One', sans-serif;
+}
+.nav-items{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Hero styles */
+
+.carousel_img{
+  height: 75vh;
+  width: auto;
+  object-fit: cover;
+}
+
+
+
+#hero{
+  margin: 0 auto;
+}
+
+
+#experiences{
+  display: flex;
+
+  justify-content: space-around;
+}
+
+/* About us styles */
+
+
 
 #about_us_main{
 display: flex;
 flex-direction: column;
-align-items: center;
 justify-content: center;
+padding: 0 30px 0 0;
+
 }
 
+.featured_heading, .about_us_heading{
+  font-size: 48px;
+  font-weight: bold;
+  margin: 30px 0;
+}
 
+.about_us_title{
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.about_us_description{
+  font-size: 22px;
+}
+
+/* Testimonials */
+#testimonials{
+  background-color:  #e1aa12;
+  
+}
+
+.testimonial-image{
+  width: 100px;
+  height: 100px;
+  border-radius: 5rem;
+  margin-top: -50px;
+  object-fit: cover;
+}
+
+.testimonial_img_container{
+  display: flex;
+  justify-content: center;
+}
 
 /* footer styles */
 
@@ -23,6 +104,7 @@ justify-content: center;
   align-items: center;
   background-color: rgb(177, 185, 198);
   padding: 30px 0;
+
 }
 
 .contact_info h5{
@@ -53,4 +135,24 @@ justify-content: center;
   height: 250px;
   margin: 10px;
   
+}
+
+.icon-fb{
+  background-color: #3b5998;
+}
+
+.icon-tw{
+  background-color: #55acee;
+}
+
+.icon-ig{
+  background-color: #ac2bac;
+}
+
+footer{
+  background-color: #1A385A;
+}
+
+.copy{
+  background-color: rgba(0, 0, 0, 0.2);
 }
