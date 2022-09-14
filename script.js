@@ -9,15 +9,23 @@ const breweriesResults = document.getElementById("breweries_results");
 
 searchForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    console.log(searchInput);
+
+    if(eventResults.childNodes){
+      eventResults.innerHTML = "";
+      breweriesResults.innerHTML = ""
+    
+    }
+  
     const location = searchInput.value;
     ticketApi(location);
-    beerApi();
+    beerApi(location);
+    searchInput.value = "";
+
 })
 
 function ticketApi(locationName) {
   fetch(
-    `https://app.ticketmaster.com/discovery/v2/events.json?stateCode=${locationName}&apikey=${ticket_api}`
+    `https://app.ticketmaster.com/discovery/v2/events.json?city=${locationName}&apikey=${ticket_api}`
   )
     .then(function (response) {
       return response.json();
@@ -38,8 +46,8 @@ function ticketApi(locationName) {
 }
 
 
-function beerApi() {
-  fetch(`https://api.openbrewerydb.org/breweries?by_city=new_york`)
+function beerApi(locationName) {
+  fetch(`https://api.openbrewerydb.org/breweries?by_city=${locationName}`)
     .then(function (response) {
       return response.json();
     })
@@ -57,6 +65,7 @@ function beerApi() {
 
 
 function createCards(name, imgUrl, container){
+  
 
   const colDiv = document.createElement("div");
         colDiv.classList.add("col");
