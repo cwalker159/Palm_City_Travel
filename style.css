@@ -47,12 +47,11 @@ button{
 
 #experiences{
   display: flex;
-
   justify-content: space-around;
 }
 
 
-}
+
 
 
 #experiences{
@@ -92,7 +91,7 @@ padding: 0 30px 0 0;
 
 /* Testimonials */
 #testimonials{
-  background-color:  #e1aa12;
+  background-color:#e1aa12;
   
 }
 
@@ -105,13 +104,10 @@ padding: 0 30px 0 0;
 }
 
 
-}
+
 
 /* Testimonials */
-#testimonials{
-  background-color: rgb(177, 185, 198);
-  
-}
+
 .testimonialTittle{
   font-size: 40px;
   font-weight: bold;
@@ -194,7 +190,7 @@ footer{
 
   background-color: #1A385A;
 
-  background-color: #929fba;
+  
 
 }
 
