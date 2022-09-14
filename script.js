@@ -1,12 +1,23 @@
 
+
 const ticket_api = "4Js5FI6dBx6yCjYyLtYNgDAZE5PVJe6i";
 const eventResults = document.getElementById("event_results");
+const searchForm = document.getElementById("search_form");
+const searchInput = document.getElementById("search_input");
+const breweriesResults = document.getElementById("breweries_results");
 
-ticketApi();
 
-function ticketApi() {
+searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    console.log(searchInput);
+    const location = searchInput.value;
+    ticketApi(location);
+    beerApi();
+})
+
+function ticketApi(locationName) {
   fetch(
-    `https://app.ticketmaster.com/discovery/v2/events.json?stateCode=NY&apikey=${ticket_api}`
+    `https://app.ticketmaster.com/discovery/v2/events.json?stateCode=${locationName}&apikey=${ticket_api}`
   )
     .then(function (response) {
       return response.json();
@@ -49,8 +60,6 @@ function ticketApi() {
     });
 }
 
-const breweriesResults = document.getElementById("breweries_results");
-beerApi();
 
 function beerApi() {
   fetch(`https://api.openbrewerydb.org/breweries?by_city=new_york`)
