@@ -52,8 +52,6 @@ button{
 
 
 
-
-
 #experiences{
   display: flex;
 
@@ -106,7 +104,10 @@ padding: 0 30px 0 0;
 
 
 
+
+
 /* Testimonials */
+
 
 .testimonialTittle{
   font-size: 40px;
@@ -174,7 +175,6 @@ footer{
 
   background-color: #1A385A;
 
-  
 
 }
 
