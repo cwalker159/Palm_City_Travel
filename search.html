@@ -18,10 +18,14 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- MY cSS -->
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div class="container-fluid">
     <header>
 
       <!-- Company logo, search form (search bar will )-->
@@ -76,54 +80,54 @@
     </header>
 
     <main>
-      <section id="featured_locations">
+        <section id="featured_locations">
 
-        <div id="suggested_dest_box">
-          <div class="card-group">
-            <div class="card">
-              <img src="./images/photo_Newyork.webp" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Newyork City</h5>
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
+
+        <h2 class="text-center featured_heading">Trending Places</h2>
+        <div id="experiences">
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card">
+                  <img src="./images/photo_Lasvegas4.jpeg" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+                  <div class="card-body">
+                    <h5 class="card-title">Restaurants</h5>
+                    <p class="card-text">
+                      This is a longer card with supporting text below as a natural lead-in to
+                      additional content. This content is a little bit longer.
+                    </p>
+                    <button class="btn btn-primary">Read more</button>
+                  </div>
+                </div>
               </div>
-              <div class="card-footer">
-                <small class="text-muted">Button</small>
+              <div class="col">
+                <div class="card">
+                  <img src="./images/photo_Lasvegas4.jpeg" class="card-img-top" alt="Palm Springs Road"/>
+                  <div class="card-body">
+                    <h5 class="card-title">Events</h5>
+                    <p class="card-text">
+                      This is a longer card with supporting text below as a natural lead-in to
+                      additional content. This content is a little bit longer.
+                    </p>
+                    <button class="btn btn-primary">Read more</button>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="card">
-              <img src="./images/photo_Lasvegas4.jpeg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Las Vegas</h5>
-                <p class="card-text">
-                  This card has supporting text below as a natural lead-in to
-                  additional content.
-                </p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Button</small>
-              </div>
-            </div>
-            <div class="card">
-              <img src="./images/photo_Maimi.webp" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Miami</h5>
-                <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This card has even longer
-                  content than the first to show that equal height action.
-                </p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Button</small>
+              <div class="col">
+                <div class="card">
+                  <img src="./images/priscilla-du-preez-W3SEyZODn8U-unsplash.jpg" class="card-img-top" alt="Skyscrapers"/>
+                  <div class="card-body">
+                    <h5 class="card-title">Breweries</h5>
+                    <p class="card-text">
+                      This is a longer card with supporting text below as a natural lead-in to
+                      additional content. This content is a little bit longer.
+                    </p>
+                    <button class="btn btn-primary">Read more</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
 
         <!-- display location cards for NY, LV, Miami-->
       </section>
@@ -134,25 +138,109 @@
     </main>
 
 
-    <footer>
-        <div class="footer_info">
-            <div class="copyright_info">
-              
-                <p class="rights"><span>©  </span><span class="copyright-year">2022</span><span> </span><span>Company</span><span> - </span><span>All Rights Reserved.</span></p>
-            </div>
-            
-            <div class="contact_info">
-              <h5>Contact us</h5>
-              <div class="contact-list">
-                <p>Address: 123 South Park Avenue,Alexandria, VA, USA | Email: <a href="mailto:#">palmcitytravelguide@email.com</a> | Phone: <a href="tel:#">1.703.555.555</a></p>
-                <p class="footer_links"><a href="./index.html">Home</a> | <a href="./index.html#about-us"> About us</a></p>
-              
-              </div>
-               
+
+    
+  <!-- Footer -->
+  <footer class="text-center text-lg-start text-white mb-5">
+
+    <div class="text-center p-3 copy"> 
+        © 2022 Copyright | Palm City Travel Guide Inc.
+     </div>
+    <!-- Grid container -->
+
+    <div class="container p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <img src="./images/Palm City Travel Guide logo.png" alt="" width="200" height="198">
+          </div> 
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Experiences</h6>
+            <p>
+              <a class="text-white">Restaurants</a>
+            </p>
+            <p>
+              <a class="text-white">Events</a>
+            </p>
+            <p>
+              <a class="text-white">Breweries</a>
+            </p>
+            <p>
+              <a class="text-white">Must see places</a>
+            </p>
           </div>
-    </footer>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Contact us</h6>
+            <p><i class="fas fa-home mr-3"></i> 123 South Park Avenue, </p>
+            <p> Alexandria, VA, USA </p>
+            <p><i class="fas fa-envelope mr-3"></i>  palmcitytravelguide@email.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 1.703.555.555</p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+
+            <!-- Facebook -->
+            <a
+               class="btn btn-primary btn-floating m-1 icon-fb"
+               href="#!"
+               role="button"
+               ><i class="fa-brands fa-facebook"></i></i
+              ></a>
+
+            <!-- Twitter -->
+            <a
+               class="btn btn-primary btn-floating m-1 icon-tw"
+               href="#!"
+               role="button"
+               ><i class="fab fa-twitter"></i
+              ></a>
+
+        
+
+            <!-- Instagram -->
+            <a
+               class="btn btn-primary btn-floating m-1 icon-ig"
+               href="#!"
+               role="button"
+               ><i class="fab fa-instagram"></i
+              ></a>
+
+           
+           
+          </div>
+        </div>
+        <!--Grid row-->
+      </section>
+     
+    </div>
+    
+
+    
+  </footer>
+  
 
 
+
+</div>    
 
 
     <script
