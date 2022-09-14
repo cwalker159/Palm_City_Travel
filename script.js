@@ -12,40 +12,17 @@ function ticketApi() {
       return response.json();
     })
     .then(function (data) {
-      console.log(data._embedded.events);
-      console.log(
-        "https://s1.ticketm.net/dam/a/a0a/5c204f25-e735-4c39-aeeb-970531f40a0a_1649061_TABLET_LANDSCAPE_LARGE_16_9.jpg"
-      );
+      
+      
       console.log(data._embedded.events[0].images[0].url);
 
       for (let i = 0; i < 3; i++) {
-        testImgUrl = data._embedded.events[i].images[i].url;
-
-        const colDiv = document.createElement("div");
-        colDiv.classList.add("col");
-        const cardDiv = document.createElement("div");
-        cardDiv.classList.add("card");
-
-        colDiv.appendChild(cardDiv);
-
-        const img = document.createElement("img");
-        img.setAttribute("src", testImgUrl);
-        eventResults.appendChild(img);
-        img.classList.add("card-img-top");
-
-        cardDiv.appendChild(img);
-
-        const cardBody = document.createElement("div");
-        cardBody.classList.add("card-body");
-        cardDiv.appendChild(cardBody);
-
-        const cardTitle = document.createElement("h5");
-        cardTitle.classList.add("card-title");
-        cardTitle.innerText = data._embedded.events[i].name;
-        cardBody.appendChild(cardTitle);
-
-        eventResults.appendChild(colDiv);
+        const ImgUrl = data._embedded.events[i].images[i].url;
+        const name = data._embedded.events[i].name;
+        createCards(name, ImgUrl, eventResults);
       }
+
+    
     });
 }
 
@@ -60,20 +37,30 @@ function beerApi() {
 
     .then(function (data) {
       for (let count = 0; count < 3; count++) {
-        console.log(data[0].name);
-        const colDiv = document.createElement("div");
-        colDiv.classList.add("col");
 
+        const imgUrl = "https://images.unsplash.com/photo-1555658636-6e4a36218be7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80";
+        const name = data[count].name;
+        createCards(name, imgUrl, breweriesResults);
+      }
+        
+    });
+}
+
+
+function createCards(name, imgUrl, container){
+
+  const colDiv = document.createElement("div");
+        colDiv.classList.add("col");
         const cardDiv = document.createElement("div");
         cardDiv.classList.add("card");
+
         colDiv.appendChild(cardDiv);
 
         const img = document.createElement("img");
-        img.setAttribute(
-          "src",
-          "https://images.unsplash.com/photo-1555658636-6e4a36218be7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-        );
+        img.setAttribute("src", imgUrl);
+        eventResults.appendChild(img);
         img.classList.add("card-img-top");
+
         cardDiv.appendChild(img);
 
         const cardBody = document.createElement("div");
@@ -82,11 +69,9 @@ function beerApi() {
 
         const cardTitle = document.createElement("h5");
         cardTitle.classList.add("card-title");
-        cardTitle.innerText = data[count].name;
+        cardTitle.innerText = name;
         cardBody.appendChild(cardTitle);
 
-        breweriesResults.appendChild(colDiv);
-      }
-    });
-}
+        container.appendChild(colDiv);
 
+}
