@@ -3,6 +3,7 @@ const eventResults = document.getElementById("event_results");
 const searchForm = document.getElementById("search_form");
 const searchInput = document.getElementById("search_input");
 const breweriesResults = document.getElementById("breweries_results");
+
 const restaurantResults = document.getElementById("restaurant_results");
 
 const api_key =
@@ -11,6 +12,47 @@ const api_url = encodeURI(
   "https://api.yelp.com/v3/businesses/search?term=restaurants&location=miami"
 );
 // const corsUrl = `https://cors-enabler-ns.herokuapp.com/bypass-cors?apiKey=${api_key}&apiUrl=${api_url}`
+
+const restButtons = document.getElementById("restButton");
+const miamiButtons = document.getElementById("miamiButton");
+const newyorkButtons = document.getElementById("newyorkButton");
+
+restButtons.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  if (eventResults.childNodes) {
+    eventResults.innerText = "";
+    breweriesResults.innerText = "";
+  }
+
+  ticketApi("Las Vegas");
+  beerApi("Las Vegas");
+});
+
+miamiButtons.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  if (eventResults.childNodes) {
+    eventResults.innerText = "";
+    breweriesResults.innerText = "";
+  }
+
+  ticketApi("Miami");
+  beerApi("Miami");
+});
+
+newyorkButtons.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  if (eventResults.childNodes) {
+    eventResults.innerText = "";
+    breweriesResults.innerText = "";
+  }
+
+  ticketApi("New York");
+  beerApi("New York");
+});
+
 
 searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
