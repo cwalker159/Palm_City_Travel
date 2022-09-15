@@ -19,6 +19,9 @@
       crossorigin="anonymous"
     />
 
+     <!-- google fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- MY cSS -->
@@ -32,13 +35,13 @@
 
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand logo" href="./index.html">
             <img
               src="https://res.cloudinary.com/dlh51prh7/image/upload/v1663103068/Palm%20City%20Travel%20Project/Blue_Orange_Flight_Destination_Travel_Agency_Logo_2_eykmzp.png"
               alt="Bootstrap"
               width="100"
               height="94"
-            />
+            /> Palm City Travel Guide
           </a>
           <button
             class="navbar-toggler"
@@ -52,17 +55,10 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html#about-us">About us</a>
-              </li>
-            
-            </ul>
+          
 
-            <form id="search_form" class="d-flex" role="search">
+            <form id="search_form" class="d-flex mx-5" role="search">
+              <i class="fas fa-search"></i>
               <input
                 id="search_input"
                 class="form-control me-2"
@@ -70,9 +66,17 @@
                 placeholder="Please enter a city"
                 aria-label="Search"
               />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
+              
+
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-5">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./index.html#about-us">About us</a>
+                </li>
+              
+              </ul>
             </form>
           </div>
         </div>
