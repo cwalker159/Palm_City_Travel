@@ -23,13 +23,22 @@ button{
   align-items: center;
   font-family: 'Paytone One', sans-serif;
   margin-right: 100px;
+  color: white;
+  font-size: 35px;
 }
 .nav-items{
   display: flex;
   justify-content: space-between;
 }
 
+#navbar {
+  background-color: #1A385A;
+}
 
+.nav-link {
+  color: white;
+  font-size: 20px;
+}
 /* Hero styles */
 
 .carousel_img{
