@@ -8,10 +8,61 @@ const api_key = "7WdpoAlKL0j_ELY13HRYgMbruPV-CKw2Ez5dkzjzK7kq5HGUmqIm5PK7zTmhnWy
 const api_url = encodeURI('https://api.yelp.com/v3/businesses/search?term=restaurants&location=miami');
 // const corsUrl = `https://cors-enabler-ns.herokuapp.com/bypass-cors?apiKey=${api_key}&apiUrl=${api_url}`
 
+const restaurantResults = document.getElementById("restaurant_results");
+
+const api_key =
+  "7WdpoAlKL0j_ELY13HRYgMbruPV-CKw2Ez5dkzjzK7kq5HGUmqIm5PK7zTmhnWyIe8SjsrnuFq9QsI2iq5xOQI5J0V960IdOhdEzPaj3SejU8F8aH5sis43MR4kfY3Yx";
+const api_url = encodeURI(
+  "https://api.yelp.com/v3/businesses/search?term=restaurants&location=miami"
+);
+// const corsUrl = `https://cors-enabler-ns.herokuapp.com/bypass-cors?apiKey=${api_key}&apiUrl=${api_url}`
+
+const restButtons = document.getElementById("restButton");
+const miamiButtons = document.getElementById("miamiButton");
+const newyorkButtons = document.getElementById("newyorkButton");
+
+restButtons.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  if (eventResults.childNodes) {
+    eventResults.innerText = "";
+    breweriesResults.innerText = "";
+  }
+
+  ticketApi("Las Vegas");
+  beerApi("Las Vegas");
+});
+
+miamiButtons.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  if (eventResults.childNodes) {
+    eventResults.innerText = "";
+    breweriesResults.innerText = "";
+  }
+
+  ticketApi("Miami");
+  beerApi("Miami");
+});
+
+newyorkButtons.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  if (eventResults.childNodes) {
+    eventResults.innerText = "";
+    breweriesResults.innerText = "";
+  }
+
+  ticketApi("New York");
+  beerApi("New York");
+});
+
+
 searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
   if (eventResults.childNodes) {
+    restaurantResults.innerHTML = "";
     eventResults.innerHTML = "";
     breweriesResults.innerHTML = "";
   }
@@ -24,6 +75,7 @@ searchForm.addEventListener("submit", (event) => {
 });
 
 // Yelp API
+
 
 
  
@@ -48,6 +100,9 @@ searchForm.addEventListener("submit", (event) => {
      
  }
  
+
+
+
 
 
 
@@ -132,3 +187,5 @@ function createCards(name, imgUrl, container, phone) {
 
   container.appendChild(colDiv);
 }
+
+
