@@ -3,6 +3,10 @@ const eventResults = document.getElementById("event_results");
 const searchForm = document.getElementById("search_form");
 const searchInput = document.getElementById("search_input");
 const breweriesResults = document.getElementById("breweries_results");
+const restaurantResults = document.getElementById("restaurant_results");
+const api_key = "7WdpoAlKL0j_ELY13HRYgMbruPV-CKw2Ez5dkzjzK7kq5HGUmqIm5PK7zTmhnWyIe8SjsrnuFq9QsI2iq5xOQI5J0V960IdOhdEzPaj3SejU8F8aH5sis43MR4kfY3Yx"
+const api_url = encodeURI('https://api.yelp.com/v3/businesses/search?term=restaurants&location=miami');
+// const corsUrl = `https://cors-enabler-ns.herokuapp.com/bypass-cors?apiKey=${api_key}&apiUrl=${api_url}`
 
 searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -15,8 +19,39 @@ searchForm.addEventListener("submit", (event) => {
   const location = searchInput.value;
   ticketApi(location);
   beerApi(location);
+  yelpApi(location);
   searchInput.value = "";
 });
+
+// Yelp API
+
+
+ 
+ function yelpApi(locationName){
+
+
+     fetch(`https://cors-enabler-ns.herokuapp.com/bypass-cors?apiKey=${api_key}&apiUrl=https://api.yelp.com/v3/businesses/search?term=restaurants&location=${locationName}`)
+     .then(function(response){
+        return response.json();
+     })
+     .then(function(data){
+      console.log(data)
+      
+
+        for (let i = 0; i < 3; i++) {
+          const ImgUrl = data.businesses[i].image_url;
+          const name = data.businesses[i].name;
+          const phone = data.businesses[i].phone;
+          createCards(name, ImgUrl, restaurantResults, phone);
+        }
+     })
+     
+ }
+ 
+
+
+
+// Tickeymaster API
 
 function ticketApi(locationName) {
   fetch(
@@ -26,16 +61,18 @@ function ticketApi(locationName) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data._embedded.events[0].images[0].url);
+      console.log(data);
 
       for (let i = 0; i < 3; i++) {
         const ImgUrl = data._embedded.events[i].images[i].url;
         const name = data._embedded.events[i].name;
-        createCards(name, ImgUrl, eventResults);
+        const phone = '';
+        createCards(name, ImgUrl, eventResults, phone);
       }
     });
 }
 
+// Beer API
 function beerApi(locationName) {
   let imgLinks = [
     "./images/dovi-rfOFRwKHtJM-unsplash.jpg",
@@ -49,16 +86,18 @@ function beerApi(locationName) {
     })
 
     .then(function (data) {
+      console.log(data)
       for (let count = 0; count < 3; count++) {
         // const imgUrl =
         //   "https://images.unsplash.com/photo-1555658636-6e4a36218be7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80";
         const name = data[count].name;
-        createCards(name, imgLinks[count], breweriesResults);
+        const phone = '';
+        createCards(name, imgLinks[count], breweriesResults, phone);
       }
     });
 }
 
-function createCards(name, imgUrl, container) {
+function createCards(name, imgUrl, container, phone) {
   const colDiv = document.createElement("div");
   colDiv.classList.add("col");
   const cardDiv = document.createElement("div");
@@ -81,6 +120,15 @@ function createCards(name, imgUrl, container) {
   cardTitle.classList.add("card-title");
   cardTitle.innerText = name;
   cardBody.appendChild(cardTitle);
+
+  if(phone.length !== 0){
+  const cardPhone = document.createElement('p');
+  cardPhone.classList.add('card-text');
+  cardPhone.innerText = phone;
+  cardBody.appendChild(cardPhone);
+
+  }
+  
 
   container.appendChild(colDiv);
 }
