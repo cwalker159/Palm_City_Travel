@@ -212,3 +212,45 @@ footer{
   padding: 12px 40px;
  
 }
+
+
+/* media queries */
+
+@media (max-width: 576px){
+
+  .col-test{
+    margin-bottom: 50px;
+  }
+
+  .col-test-last{
+    margin-bottom: 20px;
+  }
+
+
+  #search_input{
+
+    width: 300px;
+   
+
+  }
+
+  #search_form{
+    margin-left: 0;
+  }
+
+}
+
+
+@media (max-width: 375px){
+
+ 
+
+  #about-us{
+
+      width: 230px;
+      text-align: center;
+      margin: 0 auto;
+
+  }
+
+}
