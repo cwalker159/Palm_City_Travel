@@ -3,6 +3,45 @@ const eventResults = document.getElementById("event_results");
 const searchForm = document.getElementById("search_form");
 const searchInput = document.getElementById("search_input");
 const breweriesResults = document.getElementById("breweries_results");
+const restButtons = document.getElementById("restButton");
+const miamiButtons = document.getElementById("miamiButton");
+const newyorkButtons = document.getElementById("newyorkButton");
+
+restButtons.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  if (eventResults.childNodes) {
+    eventResults.innerText = "";
+    breweriesResults.innerText = "";
+  }
+
+  ticketApi("Las Vegas");
+  beerApi("Las Vegas");
+});
+
+miamiButtons.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  if (eventResults.childNodes) {
+    eventResults.innerText = "";
+    breweriesResults.innerText = "";
+  }
+
+  ticketApi("Miami");
+  beerApi("Miami");
+});
+
+newyorkButtons.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  if (eventResults.childNodes) {
+    eventResults.innerText = "";
+    breweriesResults.innerText = "";
+  }
+
+  ticketApi("New York");
+  beerApi("New York");
+});
 
 searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
