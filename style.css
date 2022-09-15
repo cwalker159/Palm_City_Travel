@@ -33,7 +33,22 @@ button{
 
 #navbar {
   background-color: #1A385A;
+  top:0;
+  position:-webkit-sticky;
+  position: sticky;
+  z-index: 100;
+ 
 }
+
+
+/* #navbar2 {
+  background-color: #1A385A;
+  top:0;
+  position:-webkit-sticky;
+  position: sticky;
+  z-index: 100;
+ 
+} */
 
 .nav-link {
   color: white;
@@ -239,6 +254,8 @@ footer{
   }
 
 }
+
+
 
 
 @media (max-width: 375px){
