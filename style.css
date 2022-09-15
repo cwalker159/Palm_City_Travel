@@ -22,6 +22,7 @@ button{
   display: flex;
   align-items: center;
   font-family: 'Paytone One', sans-serif;
+  margin-right: 100px;
 }
 .nav-items{
   display: flex;
@@ -180,4 +181,25 @@ footer{
 
 .copy{
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* search styles */
+
+#search_form{
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: 100px;
+}
+
+.fa-search{
+  position: absolute;
+  left: 15px;
+
+}
+#search_input{
+  width: 500px;
+  border-radius: 30px;
+  padding: 12px 40px;
+ 
 }
