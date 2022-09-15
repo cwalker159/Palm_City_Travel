@@ -124,7 +124,7 @@ function ticketApi(locationName) {
 function beerApi(locationName) {
   let imgLinks = [
     "./images/dovi-rfOFRwKHtJM-unsplash.jpg",
-    "./images/louis-hansel-WCm4dFvZnMM-unsplash (1).jpg",
+    "./images/josh-olalde-5PGp5nDOKxI-unsplash.jpg",
     "./images/sal-gh-4GuDoPLA8G0-unsplash.jpg",
   ];
 
