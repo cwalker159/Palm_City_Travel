@@ -177,8 +177,12 @@ function createCards(name, imgUrl, container, phone) {
 
   if (phone.length !== 0) {
     const cardPhone = document.createElement("p");
+    const atag = document.createElement('a');
+    atag.setAttribute('href', `tel:${phone}`)
     cardPhone.classList.add("card-text");
-    cardPhone.innerText = phone;
+    cardPhone.innerText =  "Phone: ";
+    atag.innerText = phone;
+    cardPhone.appendChild(atag);
     cardBody.appendChild(cardPhone);
   }
 
