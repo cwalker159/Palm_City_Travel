@@ -88,6 +88,9 @@ function yelpApi(locationName) {
       return response.json();
     })
     .then(function (data) {
+
+      
+ 
       for (let i = 0; i < 3; i++) {
         const ImgUrl = data.businesses[i].image_url;
         const name = data.businesses[i].name;
@@ -108,7 +111,7 @@ function ticketApi(locationName) {
     })
     .then(function (data) {
       if (!data._embedded) {
-        eventResults.innerText = "No Events Found.";
+        eventResults.innerText = "No events found for this location. Please enter another location.";
         eventResults.setAttribute("style", "padding: 25px; font-size: 25px;");
       }
       for (let i = 0; i < 3; i++) {
@@ -135,7 +138,7 @@ function beerApi(locationName) {
 
     .then(function (data) {
       if (data.length === 0) {
-        breweriesResults.innerText = "No Breweries Found.";
+        breweriesResults.innerText = "No breweries found for this location. Please enter another location.";
         breweriesResults.setAttribute(
           "style",
           "padding: 25px; font-size: 25px;"
