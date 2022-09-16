@@ -14,6 +14,28 @@ const restButtons = document.getElementById("restButton");
 const miamiButtons = document.getElementById("miamiButton");
 const newyorkButtons = document.getElementById("newyorkButton");
 
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  if (eventResults.childNodes) {
+    restaurantResults.innerHTML = "";
+    eventResults.innerHTML = "";
+    breweriesResults.innerHTML = "";
+  }
+
+  const location = searchInput.value;
+
+  if (location.length === 0) {
+    alert("Please enter a valid city name");
+  } else {
+    ticketApi(location);
+    beerApi(location);
+    yelpApi(location);
+  }
+
+  searchInput.value = "";
+});
+
 restButtons.addEventListener("click", (event) => {
   event.preventDefault();
 
@@ -56,27 +78,7 @@ newyorkButtons.addEventListener("click", (event) => {
   yelpApi("New York");
 });
 
-searchForm.addEventListener("submit", (event) => {
-  event.preventDefault();
 
-  if (eventResults.childNodes) {
-    restaurantResults.innerHTML = "";
-    eventResults.innerHTML = "";
-    breweriesResults.innerHTML = "";
-  }
-
-  const location = searchInput.value;
-
-  if (location.length === 0) {
-    alert("Please enter a valid city name");
-  } else {
-    ticketApi(location);
-    beerApi(location);
-    yelpApi(location);
-  }
-
-  searchInput.value = "";
-});
 
 // Yelp API
 
