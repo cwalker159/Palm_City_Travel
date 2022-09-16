@@ -16,8 +16,6 @@ button{
 
 /* nav styles */
 
-
-
 .logo{
   display: flex;
   align-items: center;
@@ -62,13 +60,10 @@ button{
   object-fit: cover;
 }
 
-
-
 #hero{
   margin: 0 auto;
 
 }
-
 
 #experiences{
   display: flex;
@@ -116,6 +111,11 @@ padding: 0 30px 0 0;
 #testimonials{
   background-color:#e1aa12;
   
+}
+
+#testimonialPara{
+font-size: 20px;
+
 }
 
 .testimonial-image{
